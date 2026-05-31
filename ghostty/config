@@ -1,0 +1,15 @@
+# UI
+theme = dark:Ayu,light:Ayu Light
+
+background-opacity = 0.9
+background-blur = 25
+# background-blur = macos-glass-clear 
+# macos-titlebar-style = transparent
+
+window-padding-balance = true
+window-padding-x = 8
+window-padding-y = 8
+
+# Fonts
+font-family = "MonaspiceAr Nerd Font Mono"
+font-size = 13.5

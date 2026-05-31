@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/liangmiQwQ/mo/main/config_schema.json",
+  "root": "/Users/liangmi/code",
+  "editor": "code",
+  "shells": [
+    "zsh"
+  ],
+  "alias": {
+    "clone": [
+      "k"
+    ],
+    "list": [
+      "li"
+    ],
+    "cd": [
+      "i"
+    ],
+    "edit": [
+      "e"
+    ],
+    "open": [
+      "o"
+    ],
+    "fork": [
+      "fr"
+    ]
+  }
+}

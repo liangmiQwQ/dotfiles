@@ -1,0 +1,20 @@
+[user]
+	name = Liang Mi
+	email = github@liangmi.dev
+[http]
+	proxy = http://127.0.0.1:6152
+	postBuffer = 524288000
+[https]
+	proxy = http://127.0.0.1:6152
+[core]
+	autocrlf = input
+	excludesfile = /Users/liangmi/.gitignore
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true

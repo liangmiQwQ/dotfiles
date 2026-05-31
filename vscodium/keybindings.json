@@ -1,0 +1,22 @@
+[
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "cmd+y",
+    "command": "workbench.action.files.openFileFolderInNewWindow"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "cmd+r",
+    "command": "outline.focus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.scm.focus"
+  }
+]

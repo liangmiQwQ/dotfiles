@@ -1,0 +1,89 @@
+# Dedupe command history
+setopt HIST_IGNORE_ALL_DUPS
+
+# Default terminal key bindings
+bindkey -e
+
+# Terminal title
+zstyle ':zim:termtitle' format '%1~'
+
+# Autosuggestions
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+
+# Syntax highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Zim
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  if (( ${+commands[curl]} )); then
+    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  else
+    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  fi
+fi
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init
+fi
+source ${ZIM_HOME}/init.zsh
+
+# Personal and functions
+alias g="git"
+alias ski="skills add liangmiQwQ/skills -g --yes"
+alias j="just"
+alias otp='oathtool --base32 --totp'
+alias cc='claude --dangerously-skip-permissions'
+alias cx='codex --yolo'
+alias main='git switch main && git pull'
+alias m="main"
+alias sk="skills add liangmiQwQ/skills -g --yes"
+
+# Homebrew JDK 25
+export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# Added by Antigravity
+export PATH="/Users/liangmi/.antigravity/antigravity/bin:$PATH"
+
+# bun completions
+[ -s "/Users/liangmi/.bun/_bun" ] && source "/Users/liangmi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# pnpm
+export PNPM_HOME="/Users/liangmi/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+#_MO_START_
+# Please do not edit the comments `#_MO_START_` or `#_MO_END_`, which probably makes mo feature broken.
+if command -v mo-inner &>/dev/null; then
+  source <(mo-inner shell zsh)
+else
+  _mo_tmp=$(mktemp) && awk '/^#_MO_START_$/{f=1;next} f&&/^#_MO_END_$/{f=0;next} !f' ~/.zshrc >| "$_mo_tmp" && mv "$_mo_tmp" ~/.zshrc
+  unset _mo_tmp
+fi
+#_MO_END_

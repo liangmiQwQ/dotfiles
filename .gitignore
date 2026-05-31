@@ -1,0 +1,7 @@
+.DS_Store
+
+# GitHub auth tokens live here. Keep only gh/config.yml in git.
+gh/hosts.yml
+
+# Local backup/output directories.
+.dotfiles-backup/
