@@ -37,9 +37,10 @@ alias j="just"
 alias otp='oathtool --base32 --totp'
 alias cc='claude --dangerously-skip-permissions'
 alias cx='codex --yolo'
+alias ca='codex app'
 alias main='git switch main && git pull'
 alias m="main"
-alias sk="skills add liangmiQwQ/skills -g --yes"
+alias sk="skills add liangmiQwQ/skills -g -y -a codex"
 
 # Homebrew JDK 25
 export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
@@ -54,9 +55,6 @@ eval "$(pyenv init --path)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Added by Antigravity
-export PATH="/Users/liangmi/.antigravity/antigravity/bin:$PATH"
-
 # bun completions
 [ -s "/Users/liangmi/.bun/_bun" ] && source "/Users/liangmi/.bun/_bun"
 
@@ -64,19 +62,7 @@ export PATH="/Users/liangmi/.antigravity/antigravity/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
-
 export PATH="$HOME/.local/bin:$PATH"
-
-
-# pnpm
-export PNPM_HOME="/Users/liangmi/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end
 
 #_MO_START_
 # Please do not edit the comments `#_MO_START_` or `#_MO_END_`, which probably makes mo feature broken.

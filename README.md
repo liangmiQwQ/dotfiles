@@ -6,7 +6,7 @@ This repo stores configuration only. It intentionally does not install apps, pac
 
 ## Included
 
-- VSCodium settings, keybindings, and extension inventory
+- Visual Studio Code settings, keybindings, and extension inventory
 - zsh and Zim config
 - Git global config and ignore files
 - GitHub CLI config, excluding authenticated `hosts.yml`
@@ -35,4 +35,4 @@ The script backs up existing real files under `~/.dotfiles-backup/<timestamp>/` 
 
 - Install tools and apps manually.
 - Log in to GitHub CLI with `gh auth login`.
-- Install VSCodium extensions manually if needed, using `vscodium/extensions.txt` as the inventory.
+- Install Visual Studio Code extensions manually if needed, using `vscode/extensions.txt` as the inventory.

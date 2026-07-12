@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/liangmiQwQ/mo/main/config_schema.json",
+  "$schema": "file:///Users/liangmi/.vite-plus/packages/@liangmi/mo%235dbd8af8-f909-4a27-9afb-499758e73411/lib/node_modules/@liangmi/mo/config_schema.json",
   "root": "/Users/liangmi/code",
   "editor": "code",
   "shells": [
@@ -23,6 +23,10 @@
     ],
     "fork": [
       "fr"
+    ],
+    "init": [
+      "in"
     ]
-  }
+  },
+  "compositionAlias": true
 }

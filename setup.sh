@@ -61,8 +61,8 @@ link_file "kitty/base16_solarized_dark.color.conf" "$HOME/.config/kitty/base16_s
 link_file "kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 link_file "kitty/nightfox.color.conf" "$HOME/.config/kitty/nightfox.color.conf"
 link_file "kitty/obsidian.color.conf" "$HOME/.config/kitty/obsidian.color.conf"
-link_file "vscodium/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
-link_file "vscodium/keybindings.json" "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
+link_file "vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+link_file "vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
 if [ "$backup_created" -eq 1 ]; then
   printf 'backups stored in %s\n' "$backup_dir"

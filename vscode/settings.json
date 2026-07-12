@@ -85,7 +85,7 @@
   "vim.cursorStylePerMode.visual": "block-outline",
   "vim.useSystemClipboard": true,
   // Global
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.autoUpdate": "on",
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
   "errorLens.enabledDiagnosticLevels": [
@@ -182,5 +182,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
   "git.enableCommitSigning": true,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "git.blame.editorDecoration.enabled": false,
+  "chat.disableAIFeatures": true
 }
