@@ -59,7 +59,9 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false,
   "editor.quickSuggestions": {
-    "strings": "on"
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
   },
   "security.workspace.trust.untrustedFiles": "open",
   "[markdown]": {
